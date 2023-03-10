@@ -6,3 +6,4 @@ hi again
 
 
 Happy Friday!
+This is MY text file!
