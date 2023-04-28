@@ -20,8 +20,9 @@ def sum_no_duplicates(l):
         if num not in new_list:
             new_list.append(num)
         else:
-            new_list.remove(num)
-
+            new_list = list(filter((num).__ne__, new_list))
+            l = list(filter((num).__ne__, l))
+    
     for num in new_list:
         sum += num
 
@@ -29,3 +30,4 @@ def sum_no_duplicates(l):
 
 print(sum_no_duplicates([3, 4, 3, 6])) #10
 print(sum_no_duplicates([1, 1, 2, 3])) #5
+print(sum_no_duplicates([1, 1, 2, 3,1])) #5
