@@ -8,11 +8,3 @@ print(strs)
 # nums = [num for num in sarah_fav_stuff if not isinstance(num, str)]
 nums = [n for n in sarah_fav_stuff if isinstance(n, (int, float))]
 print(nums)
-# To help clarify what this list is, what can I do in my program?
-
-# IDEAS #
-
-# Get list length
-# Print out the list for the user
-# Look for duplicates in the list
-# Change the variable name!
