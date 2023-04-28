@@ -17,6 +17,8 @@ def sum_no_duplicates(l):
     sum = 0
     if len(l) == 0:
         return sum
+    elif len(l) == 1:
+        return l[0]
     elif l[0] == l[1]:
         l = list(filter((l[0]).__ne__, l))
 
