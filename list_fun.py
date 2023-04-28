@@ -15,19 +15,27 @@ answer = [num for num in my_nums if num % 12 == 0]
 def sum_no_duplicates(l):
     new_list = []
     sum = 0
+    if len(l) == 0:
+        return sum
+    elif l[0] == l[1]:
+        l = list(filter((l[0]).__ne__, l))
 
     for num in l:
+        print('first list', l)
+        print('new list',new_list)
         if num not in new_list:
             new_list.append(num)
         else:
             new_list = list(filter((num).__ne__, new_list))
             l = list(filter((num).__ne__, l))
+        
     
     for num in new_list:
         sum += num
 
     return sum
 
-print(sum_no_duplicates([3, 4, 3, 6])) #10
-print(sum_no_duplicates([1, 1, 2, 3])) #5
+# print(sum_no_duplicates([3, 4, 3, 6])) #10
+# print(sum_no_duplicates([1, 1, 2, 3])) #5
 print(sum_no_duplicates([1, 1, 2, 3,1])) #5
+# print(sum_no_duplicates([1, 1, 2, 3, 1, 1])) #5
