@@ -12,13 +12,19 @@ answer = [num for num in my_nums if num % 12 == 0]
 #Sum the list but ignore the duplicates
 #Please write a function that sums a list, but ignores any duplicate items in the list.
 #For instance, for the list [3, 4, 3, 6] , the function should return 10.
-def sum_no_duplicates(l):
+def sum_no_duplicates(first_list):
+    #create empty list to store none duplicates
     new_list = []
+    #create variable to hold sum of none duplicate numbers
     sum = 0
-    for i in l:
-        if l.count(i) < 2:
-            new_list.append(i)
 
+    for num in first_list:
+        #use count to count the number of times the value appears in the first_list
+        if first_list.count(num) < 2:
+            #if num has less than 2 occurrences, add to new list
+            new_list.append(num)
+
+    #go through each item in list and add them together in the sum variable
     for num in new_list:
         sum += num
 
