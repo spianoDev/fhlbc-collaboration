@@ -7,6 +7,7 @@
 # Functions should do 1 or 2 tasks that are repeated multiple times.
 # Can be used in another file/script and can be aggregated into one larger function that calls functions
 from time import sleep
+import math
 
 def typewriter_greeting(phrase):
     # Loop through the phrase to print each character like a typewriter
@@ -14,6 +15,10 @@ def typewriter_greeting(phrase):
         sleep(.5)
         print(char, end='', flush=True)
 
-
-
 typewriter_greeting('hello code warriors')
+
+def fahrenheit_to_celsius(temperature):
+    celsius = round((temperature - 32) * (5/9))
+    return print(f'Today the temperature is {temperature} fahrenheit or {celsius} celsius')
+
+fahrenheit_to_celsius(50)
