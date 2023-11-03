@@ -31,14 +31,16 @@ from pathlib import Path
 # open() is a built-in Python function (no imports!)
 # Allows you to open a file and return a corresponding file object.
 # Multiple optional parameters, but the name of the file is mandatory.
-# try:
-#     file_path = Path("test.txt")
-#     file = open(file_path)
-#     print(file)
-#     # print(file.read())
-# except FileNotFoundError:
-#     print("The 'test.txt' file does not exist in the given file path.")
-#     exit(1)
+try:
+    file_path = Path("test.txt")
+    file = open(file_path)
+    print(file)
+    print(file.name)
+    print(file.read())
+except Exception as err:
+    # print("The 'test.txt' file does not exist in the given file path.")
+    print(err)
+    exit(1)
 
 
 
